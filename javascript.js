@@ -22,3 +22,11 @@ function changetext() {
     dd1.innerText = "Alloha";
     dd2.innerText = "Chao";
 }
+function cangebuttonvalue() {
+    var button1 = document.getElementById("div3");
+    button1.innerHTML = '<input type="button" value="Change" onclick="cangebuttonvalue()" >';
+}
+function changecolorwithclass() {
+    var dd3 = document.getElementById("class1");
+    dd3.className = "class2";
+}
