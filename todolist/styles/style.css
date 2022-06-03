@@ -30,6 +30,10 @@ ul {
  .remove {
      background-color: red;
  }
+
+ .important {
+     background-color: aquamarine;
+ }
  
  li.finished {
     color: white;
@@ -68,6 +72,11 @@ ul {
 }
  
  /* Step 12 below here */
- 
+ #diva {
+     width: 100%;
+     height: 20px;
+     font-size: 15px;
+     font-weight: bold;
+ }
 
 

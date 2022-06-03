@@ -8,7 +8,7 @@ function addTask () {
         var item = document.createElement("li");
         // add HTML for buttons and new task text
         // Note, need to use '' because of "" in HTML
-        item.innerHTML = '<input type="button" class="done" onclick="markDone(this.parentNode)"  value="&#x2713;" /> ' + '<input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" /> ' + newTask;
+        item.innerHTML = '<input type="button" class="done" onclick="markDone(this.parentNode)"  value="&#x2713;" /> ' + '<input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" /> ' + '<input type="button" class="important" onclick="important(this.parentNode)" value="!" /> ' + newTask;
 
         // add new item as part of existing list
         document.getElementById("tasks").appendChild(item); 
@@ -38,5 +38,12 @@ function doAbout() {
 
 /* Step 14 below here */
 function clearAbout() {
+    if (document.getElementById("diva").innerHTML == '<p>About text</p>') {
+    document.getElementById("diva").innerHTML = '';
+}
+}
+// highlight item from document
+function important (item) {
+    item.className='important';
 
 }
