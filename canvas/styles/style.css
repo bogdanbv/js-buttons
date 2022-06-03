@@ -1,0 +1,9 @@
+canvas {
+    width: 200pt;
+    height: 100pt;
+    margin: 10px;
+    border: solid 1px black;
+}
+input {
+    font-size: 20pt;
+}
