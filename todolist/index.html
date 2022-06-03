@@ -5,8 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script src="javascript.js"></script>
 </head>
 <body>
+    <h1 id="myHeader">TO DO List</h1>
+
+    <!-- STEPs 1 and 2 below here  -->
+    <input type="button" value="Add" onclick="addTask()">
+    <input type="text" id="input" placeholder="enter task...">
+    <hr>
     
+    <ul id="tasks">
+    
+      <li>
+    
+        <input type="button" class="done" onclick="markDone(this.parentNode)" value="&#x2713;" />
+    
+        <input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" />
+
+        make todo list
+    
+      </li>
+    
+     </ul>
+    
+    <hr>
+    
+    <!-- STEPs 8 and 9 below here  -->
+    <div id=”diva” class="aboutcolor">
+
+    </div>
+    <p>
+    <input type="button" onclick="doAbout()" value="About" />
+    </p>
+    <!-- STEP 13 below here  -->
 </body>
 </html>
