@@ -46,3 +46,22 @@ function doyellow() {
     ctx.font = "30px Arial";
     ctx.fillText("Hello",10,80);
 }
+
+function changeb() {
+    var can = document.getElementById("c1");
+    var inputcolor = document.getElementById("clr");
+    can.style.backgroundColor = inputcolor.value;
+}
+
+function dosquare() {
+    var slider = document.getElementById("sldr");
+    var len = slider.value;
+    var canv = document.getElementById("b1");
+    var ctx = canv.getContext("2d");
+    ctx.clearRect(0,0,canv.width,canv.height);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect(10,10,len,len);
+    ctx.fillRect(parseInt(len)+20,10,len,len);
+    ctx.fillRect(len*3,10,len,len);
+
+}
