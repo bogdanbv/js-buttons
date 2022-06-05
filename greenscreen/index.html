@@ -22,7 +22,10 @@
     <input type="file"  multiple="false" accept="image/*" id="bimage" onchange="loadBackgroundImage()"/>
 </p>
 <p>
+    Green color value: <span id="ra">220</span> <input type="range" max="255" min="0" value="220" id="rang" onchange="ranged()"/>
+</p>
+<p>
     <input type="button" value="Create Composite" onclick="doGreenScreen()"/>
-    <input type="button" value="Clear Canvases" onclick="clearCanvas()"/>
+    <input type="button" value="Clear Canvases" onclick="clearCanvas()"/> 
 </p>
 </html>

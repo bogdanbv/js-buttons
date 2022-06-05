@@ -1,13 +1,19 @@
 var fgimage = null;
 var bgimage = null;
-var greenThreshold = 240;
+var greenThreshold = null;
+
+
+function ranged() {
+    var ran = document.getElementById("rang").value;
+    greenThreshold = ran;
+    document.getElementById("ra").innerHTML = ran;
+}
 
 function loadForegroundImage() {
     var canvas = document.getElementById("canleft");
     var fileinput = document.getElementById("fimage");
     fgimage = new SimpleImage(fileinput);
     fgimage.drawTo(canvas);
-    alert("Foregraung image loading");
 
 }
 
@@ -16,7 +22,6 @@ function loadBackgroundImage() {
     var fileinput = document.getElementById("bimage");
     bgimage = new SimpleImage(fileinput);
     bgimage.drawTo(canvas);
-    alert("Background image loading")
 }
 
 function doGreenScreen() {
@@ -50,7 +55,7 @@ function CreateComposite() {
     for (var pixel of fgimage.values()) {
         var x = pixel.getX();
         var y = pixel.getY();
-        if (pixel.getGreen() > 250) {
+        if (pixel.getGreen() > greenThreshold) {
             var bgpixel = bgimage.getPixel(x,y);
             output.setPixel(x,y,bgpixel);
         }
