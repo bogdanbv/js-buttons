@@ -4,7 +4,7 @@ function upload() {
     var canvas = document.getElementById("can");
     var fileinput = document.getElementById("finput");
     image = new SimpleImage(fileinput);
-    // image.drawTo(canvas);
+    image.drawTo(canvas);
 }
 
 function makeGrey() {
@@ -15,6 +15,6 @@ function makeGrey() {
         pixel.setGreen(avg);
         pixel.setBlue(avg);
     }
-    var canvas = document.getElementById("can");
+    var canvas = document.getElementById("bef");
     image.drawTo(canvas);
 }
